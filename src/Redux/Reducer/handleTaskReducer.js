@@ -1,13 +1,13 @@
 const initialTodo=[
    
 ];
-const handleTaskReducer = ((state=initialTodo,action)=>{
+const handleTaskReducer = ((taskState=initialTodo,action)=>{
     switch(action.type){
         case "ADD_TASK" :
-            state = [...state,action.payload]
-            return state;
+            taskState = [...taskState,action.payload]
+            return taskState;
         default :
-        return state;
+        return taskState;
     }
 })
 export default handleTaskReducer;
